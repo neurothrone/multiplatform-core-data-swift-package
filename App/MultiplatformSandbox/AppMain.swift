@@ -5,16 +5,17 @@
 //  Created by Zaid Neurothrone on 2022-12-15.
 //
 
+import SandboxKit
 import SwiftUI
 
 @main
 struct AppMain: App {
-  let persistenceController = PersistenceController.shared
+  let persistenceController: PersistenceController = .shared
   
   var body: some Scene {
     WindowGroup {
       ContentView()
-        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        .environment(\.managedObjectContext, persistenceController.viewContext)
     }
   }
 }

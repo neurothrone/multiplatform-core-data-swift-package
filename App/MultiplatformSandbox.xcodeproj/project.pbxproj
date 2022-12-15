@@ -14,9 +14,7 @@
 		2F0AA8F5294B1F7100413753 /* MultiplatformSandboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AA8F4294B1F7100413753 /* MultiplatformSandboxTests.swift */; };
 		2F0AA8FF294B1F7100413753 /* MultiplatformSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AA8FE294B1F7100413753 /* MultiplatformSandboxUITests.swift */; };
 		2F0AA901294B1F7100413753 /* MultiplatformSandboxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AA900294B1F7100413753 /* MultiplatformSandboxUITestsLaunchTests.swift */; };
-		2F0AA916294B224400413753 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AA915294B224400413753 /* Persistence.swift */; };
-		2F0AA91D294B23A500413753 /* Entities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AA91B294B23A500413753 /* Entities.xcdatamodeld */; };
-		2F0AA920294B23E700413753 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AA91E294B23E700413753 /* Item+CoreDataClass.swift */; };
+		2F94EE6E294B434C00BDA428 /* SandboxKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F94EE6D294B434C00BDA428 /* SandboxKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +46,7 @@
 		2F0AA8FA294B1F7100413753 /* MultiplatformSandboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiplatformSandboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0AA8FE294B1F7100413753 /* MultiplatformSandboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplatformSandboxUITests.swift; sourceTree = "<group>"; };
 		2F0AA900294B1F7100413753 /* MultiplatformSandboxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplatformSandboxUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2F0AA915294B224400413753 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = ../../../../../../.Trash/Persistence.swift; sourceTree = "<group>"; };
-		2F0AA91C294B23A500413753 /* Entities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entities.xcdatamodel; sourceTree = "<group>"; };
-		2F0AA91E294B23E700413753 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F0AA925294B28B600413753 /* SandboxKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SandboxKit; path = ../SandboxKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F94EE6E294B434C00BDA428 /* SandboxKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +78,12 @@
 		2F0AA8D1294B1F7000413753 = {
 			isa = PBXGroup;
 			children = (
+				2F0AA925294B28B600413753 /* SandboxKit */,
 				2F0AA8DC294B1F7000413753 /* MultiplatformSandbox */,
 				2F0AA8F3294B1F7100413753 /* MultiplatformSandboxTests */,
 				2F0AA8FD294B1F7100413753 /* MultiplatformSandboxUITests */,
 				2F0AA8DB294B1F7000413753 /* Products */,
+				2F94EE6C294B434C00BDA428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +100,10 @@
 		2F0AA8DC294B1F7000413753 /* MultiplatformSandbox */ = {
 			isa = PBXGroup;
 			children = (
-				2F0AA91E294B23E700413753 /* Item+CoreDataClass.swift */,
 				2F0AA8DD294B1F7000413753 /* AppMain.swift */,
 				2F0AA8E4294B1F7000413753 /* ContentView.swift */,
 				2F0AA8E6294B1F7100413753 /* Assets.xcassets */,
-				2F0AA915294B224400413753 /* Persistence.swift */,
 				2F0AA8E8294B1F7100413753 /* MultiplatformSandbox.entitlements */,
-				2F0AA91B294B23A500413753 /* Entities.xcdatamodeld */,
 				2F0AA8E9294B1F7100413753 /* Preview Content */,
 			);
 			path = MultiplatformSandbox;
@@ -138,6 +134,13 @@
 			path = MultiplatformSandboxUITests;
 			sourceTree = "<group>";
 		};
+		2F94EE6C294B434C00BDA428 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +157,9 @@
 			dependencies = (
 			);
 			name = MultiplatformSandbox;
+			packageProductDependencies = (
+				2F94EE6D294B434C00BDA428 /* SandboxKit */,
+			);
 			productName = MultiplatformSandbox;
 			productReference = 2F0AA8DA294B1F7000413753 /* MultiplatformSandbox.app */;
 			productType = "com.apple.product-type.application";
@@ -268,10 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F0AA920294B23E700413753 /* Item+CoreDataClass.swift in Sources */,
-				2F0AA916294B224400413753 /* Persistence.swift in Sources */,
 				2F0AA8DE294B1F7000413753 /* AppMain.swift in Sources */,
-				2F0AA91D294B23A500413753 /* Entities.xcdatamodeld in Sources */,
 				2F0AA8E5294B1F7000413753 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,18 +628,12 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		2F0AA91B294B23A500413753 /* Entities.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2F0AA91C294B23A500413753 /* Entities.xcdatamodel */,
-			);
-			currentVersion = 2F0AA91C294B23A500413753 /* Entities.xcdatamodel */;
-			path = Entities.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCSwiftPackageProductDependency section */
+		2F94EE6D294B434C00BDA428 /* SandboxKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SandboxKit;
 		};
-/* End XCVersionGroup section */
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F0AA8D2294B1F7000413753 /* Project object */;
 }
